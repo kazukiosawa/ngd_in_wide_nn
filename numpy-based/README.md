@@ -44,6 +44,7 @@ random_seed: 1
 ==================
 Creating analytical predictor for MSE...
 Calculating analytical prediction for 2 steps...
+Training for 2 steps
 step         train_accuracy  predict      train_loss   predict      test_accuracy  predict      test_loss    predict
 0            0.36            0.36         0.134341     0.134341     0.48           0.48         0.128435     0.128435
 1            1               1            0.000203484  1.30195e-16  1              1            0.00422796   0.00436911

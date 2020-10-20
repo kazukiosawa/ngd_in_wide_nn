@@ -232,6 +232,9 @@ def main(unused_argv):
 
   del g_dd, g_td, predictor
 
+  # Train the network.
+  print(f'Training for {n_steps} steps')
+
   # Prepare print report format used in Chainer
   # https://github.com/chainer/chainer/blob/v7.1.0/chainer/training/extensions/print_report.py
   entries = ['step',
