@@ -263,7 +263,7 @@ def main(unused_argv):
       g_dd = ntk_fn(x_train, None, params)
       g_td = ntk_fn(x_test, x_train, params)
       if not natural_gradient:
-        predictor = nt.predict.gradient_descent_mse(g_dd, y_train)
+        predictor = nt.predict.gradient_descent_mse(g_dd, y_train, trace_axes=())
       else:
         predictor = natural_gradient_descent_mse(g_dd, y_train, g_td, FLAGS.damping)
     elif ng_type in [NG_BD, NG_BTD]:
