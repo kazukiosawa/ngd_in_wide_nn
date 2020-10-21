@@ -44,7 +44,7 @@ weight_variance: 2.0
 bias_variance: 0.0
 natural_gradient_type: exact
 n_steps: 2
-learning_rate: None
+learning_rate: 1.0
 damping: 0.0
 store_on_device: False
 dataset_path: None
