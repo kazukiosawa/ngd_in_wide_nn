@@ -73,7 +73,7 @@ def forward_and_backward(x, W1, W2, W3, backward=True, kfac=False):
     J_u1 = np.einsum('nab,nb->nab', J_h1, d_h1)
     return f, h1, h2, J_u1, J_u2
   else:
-    J_W3 = np.hstack([np.vstack([h2] * M3)] * M3)
+    J_W3 = np.kron(np.eye(M3, dtype=h2.dtype), h2)
     J_h2 = W3
     J_u2 = np.einsum('ab,nb->nab', J_h2, d_h2)
     del J_h2, d_h2
